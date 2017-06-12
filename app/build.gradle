@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+
+    defaultConfig {
+        applicationId 'com.nilhcem.smarthome.androidthings'
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+ext.arch_version = '1.0.0-alpha2'
+ext.dagger_version = '2.11'
+ext.gms_version = '10.0.0'
+ext.support_version = '26.0.0-beta2'
+
+dependencies {
+    compileOnly 'com.google.android.things:androidthings:0.4-devpreview'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    implementation "com.android.support:appcompat-v7:$support_version"
+
+    compileOnly "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    implementation "android.arch.lifecycle:runtime:$arch_version"
+    implementation "android.arch.lifecycle:extensions:$arch_version"
+    kapt "android.arch.lifecycle:compiler:$arch_version"
+
+    implementation "com.google.firebase:firebase-database:$gms_version"
+
+    implementation 'com.google.android.things.contrib:driver-rainbowhat:0.4'
+}
+
+apply plugin: 'com.google.gms.google-services'

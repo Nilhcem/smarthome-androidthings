@@ -1,0 +1,19 @@
+{
+  "name": "fake-oauth-server",
+  "description": "Mock implementation of an oauth server to test Actions on Google Smart Home",
+  "version": "0.0.1",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "engines" : {
+    "node" : ">=6.2.2"
+  },
+  "dependencies": {
+    "oauth2-server": "^2.4.1",
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "morgan": "^1.8.2"
+  }
+}

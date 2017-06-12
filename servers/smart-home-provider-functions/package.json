@@ -1,0 +1,15 @@
+{
+  "name": "smarthome-androidthings",
+  "description": "Sample implementation of a Smart Home cloud function that updates a firebase database",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": true,
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Nilhcem/smarthome-androidthings.git"
+  },
+  "dependencies": {
+    "firebase-admin": "^5.0.0"
+  }
+}

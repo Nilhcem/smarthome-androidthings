@@ -1,0 +1,37 @@
+# Temporary files
+*~
+\#*#
+
+# hprof captures
+captures/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file
+local.properties
+
+# IntelliJ
+*.iml
+.idea/
+
+# Firebase configuration
+google-services.json
+
+# NodeJS Dependency directories
+node_modules/
+
+# Actions on Google binary and credentials, ngrok
+gactions
+creds.data
+ngrok
+
+# Firebase service account private key
+serviceAccountKey.json
+
+# OSX files
+.DS_Store
+
+# Windows files
+Thumbs.db
