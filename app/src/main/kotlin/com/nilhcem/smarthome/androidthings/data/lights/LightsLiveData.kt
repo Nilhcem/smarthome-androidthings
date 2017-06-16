@@ -19,8 +19,8 @@ class LightsLiveData @Inject constructor(val firebase: DatabaseReference) : Live
 
     private val valueEventListener = object : ValueEventListener {
         override fun onDataChange(snapshot: DataSnapshot) {
-            val isOn = snapshot.child(FIREBASE_LIGHTS_ON).getValue(Boolean::class.java)
-            val spectrumRGB = snapshot.child(FIREBASE_LIGHTS_RGB).getValue(Int::class.java)
+            val isOn = snapshot.child(FIREBASE_LIGHTS_ON).getValue(Boolean::class.java) ?: false
+            val spectrumRGB = snapshot.child(FIREBASE_LIGHTS_RGB).getValue(Int::class.java) ?: 0
             val lights = Lights(isOn, spectrumRGB)
             Log.d(TAG, "onDataChange (value=$lights)")
             value = lights

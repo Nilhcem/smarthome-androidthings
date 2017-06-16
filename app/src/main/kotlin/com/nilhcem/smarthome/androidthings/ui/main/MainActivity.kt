@@ -28,7 +28,6 @@ class MainActivity : LifecycleActivity() {
         viewModel.lightsLiveData.observe(this, Observer { lights ->
             lights?.let {
                 boardComponents.setLights(it)
-                boardComponents.setLights(it) // issue with the LED strip, we have to set the value twice to make it work properly T_T
             }
         })
     }

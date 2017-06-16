@@ -17,7 +17,7 @@ class FanLiveData @Inject constructor(val firebase: DatabaseReference) : LiveDat
 
     private val valueEventListener = object : ValueEventListener {
         override fun onDataChange(snapshot: DataSnapshot) {
-            val newValue = snapshot.getValue(Boolean::class.java)
+            val newValue = snapshot.getValue(Boolean::class.java) ?: false
             Log.d(TAG, "onDataChange (value=$newValue)")
             value = FanState(newValue)
         }

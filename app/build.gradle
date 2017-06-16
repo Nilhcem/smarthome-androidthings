@@ -26,13 +26,13 @@ android {
     }
 }
 
-ext.arch_version = '1.0.0-alpha2'
+ext.arch_version = '1.0.0-alpha3'
 ext.dagger_version = '2.11'
-ext.gms_version = '10.0.0'
+ext.gms_version = '11.0.0'
 ext.support_version = '26.0.0-beta2'
 
 dependencies {
-    compileOnly 'com.google.android.things:androidthings:0.4-devpreview'
+    compileOnly 'com.google.android.things:androidthings:0.4.1-devpreview'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -49,6 +49,7 @@ dependencies {
 
     implementation "com.google.firebase:firebase-database:$gms_version"
 
+    implementation 'com.google.android.things.contrib:driver-apa102:0.4'
     implementation 'com.google.android.things.contrib:driver-rainbowhat:0.4'
 }
 
