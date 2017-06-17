@@ -52,7 +52,7 @@ functions-emulator start
 cd servers/smart-home-provider-functions
 npm install
 functions-emulator deploy ha --trigger-http
-functions stop
+functions-emulator stop
 ```
 
 ### OAuth2 server
