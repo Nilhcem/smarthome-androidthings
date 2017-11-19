@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.0'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.1'
 
     defaultConfig {
         applicationId 'com.nilhcem.smarthome.androidthings'
         minSdkVersion 24
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName '1.0'
     }
@@ -26,16 +26,18 @@ android {
     }
 }
 
-ext.arch_version = '1.0.0-alpha3'
-ext.dagger_version = '2.11'
-ext.gms_version = '11.0.0'
-ext.support_version = '26.0.0-beta2'
+ext.arch_version = '1.0.0'
+ext.dagger_version = '2.13'
+ext.gms_version = '11.6.0'
+ext.support_version = '27.0.1'
 
 dependencies {
-    compileOnly 'com.google.android.things:androidthings:0.4.1-devpreview'
+    compileOnly 'com.google.android.things:androidthings:0.5.1-devpreview'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support:support-media-compat:$support_version" // used by firebase
+    implementation "com.android.support:support-v4:$support_version" // used by firebase
 
     compileOnly "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
@@ -43,14 +45,13 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
-    implementation "android.arch.lifecycle:runtime:$arch_version"
     implementation "android.arch.lifecycle:extensions:$arch_version"
     kapt "android.arch.lifecycle:compiler:$arch_version"
 
     implementation "com.google.firebase:firebase-database:$gms_version"
 
-    implementation 'com.google.android.things.contrib:driver-apa102:0.4'
-    implementation 'com.google.android.things.contrib:driver-rainbowhat:0.4'
+    implementation 'com.google.android.things.contrib:driver-apa102:0.5'
+    implementation 'com.google.android.things.contrib:driver-rainbowhat:0.5'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -1,14 +1,14 @@
 package com.nilhcem.smarthome.androidthings.ui.main
 
-import android.arch.lifecycle.LifecycleActivity
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
-class MainActivity : LifecycleActivity() {
+class MainActivity : AppCompatActivity() {
 
     @Inject lateinit var boardComponents: MainBoardComponents
     @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
