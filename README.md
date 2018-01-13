@@ -81,7 +81,7 @@ cd servers
 gactions update --action_package action.json --project <PROJECT_ID>
 ```
 * Set up account linking  
-  * Grant time: Autorization code  
+  * Grant type: Autorization code  
   * Client ID: `RKkWfsi0Z9`  
   * Client secret: `eToBzeBT7OwrPQO8mZHsZtLp1qhQbe`  
   * Authorization URL: `https://<NGROK_ID>.ngrok.io/oauth`  
