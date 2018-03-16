@@ -12,7 +12,7 @@ class FanLiveData @Inject constructor(val firebase: DatabaseReference) : LiveDat
 
     companion object {
         private val TAG = FanLiveData::class.java.simpleName!!
-        private val FIREBASE_FAN_ON = "fan/on"
+        private const val FIREBASE_FAN_ON = "fan/on"
     }
 
     private val valueEventListener = object : ValueEventListener {

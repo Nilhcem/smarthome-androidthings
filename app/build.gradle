@@ -4,11 +4,11 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.1'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId 'com.nilhcem.smarthome.androidthings'
-        minSdkVersion 24
+        minSdkVersion 27
         targetSdkVersion 27
         versionCode 1
         versionName '1.0'
@@ -26,13 +26,13 @@ android {
     }
 }
 
-ext.arch_version = '1.0.0'
-ext.dagger_version = '2.13'
-ext.gms_version = '11.6.0'
-ext.support_version = '27.0.1'
+ext.arch_version = '1.1.0'
+ext.dagger_version = '2.15'
+ext.gms_version = '11.8.0'
+ext.support_version = '27.1.0'
 
 dependencies {
-    compileOnly 'com.google.android.things:androidthings:0.5.1-devpreview'
+    compileOnly 'com.google.android.things:androidthings:0.7-devpreview'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -50,8 +50,8 @@ dependencies {
 
     implementation "com.google.firebase:firebase-database:$gms_version"
 
-    implementation 'com.google.android.things.contrib:driver-apa102:0.5'
-    implementation 'com.google.android.things.contrib:driver-rainbowhat:0.5'
+    implementation 'com.google.android.things.contrib:driver-apa102:0.6'
+    implementation 'com.google.android.things.contrib:driver-rainbowhat:0.10'
 }
 
 apply plugin: 'com.google.gms.google-services'

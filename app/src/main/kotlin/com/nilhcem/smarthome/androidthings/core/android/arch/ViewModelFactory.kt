@@ -21,7 +21,7 @@ class ViewModelFactory @Inject constructor(private val creators: Map<@JvmSuppres
         }
 
         if (creator == null) {
-            throw IllegalArgumentException("unknown model class " + modelClass)
+            throw IllegalArgumentException("unknown model class $modelClass")
         }
 
         try {

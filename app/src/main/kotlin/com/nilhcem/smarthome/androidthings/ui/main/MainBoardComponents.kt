@@ -6,14 +6,14 @@ import android.arch.lifecycle.OnLifecycleEvent
 import com.google.android.things.contrib.driver.apa102.Apa102
 import com.google.android.things.contrib.driver.rainbowhat.RainbowHat
 import com.google.android.things.pio.Gpio
-import com.google.android.things.pio.PeripheralManagerService
+import com.google.android.things.pio.PeripheralManager
 import com.nilhcem.smarthome.androidthings.data.lights.Lights
 import javax.inject.Inject
 
 class MainBoardComponents @Inject constructor() : LifecycleObserver {
 
     companion object {
-        val GPIO_RELAY = "BCM18"
+        const val GPIO_RELAY = "BCM18"
     }
 
     private lateinit var relay: Gpio
@@ -21,7 +21,7 @@ class MainBoardComponents @Inject constructor() : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
-        relay = PeripheralManagerService().openGpio(GPIO_RELAY)
+        relay = PeripheralManager.getInstance().openGpio(GPIO_RELAY)
         relay.setDirection(Gpio.DIRECTION_OUT_INITIALLY_LOW)
         relay.setActiveType(Gpio.ACTIVE_LOW)
 

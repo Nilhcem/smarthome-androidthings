@@ -6,11 +6,7 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 
 @AppScope
-@Component(modules = arrayOf(
-        AndroidInjectionModule::class,
-        AppModule::class,
-        AndroidBindingModule::class)
-)
+@Component(modules = [AndroidInjectionModule::class, AppModule::class, AndroidBindingModule::class])
 interface AppComponent {
     fun inject(app: App)
 }

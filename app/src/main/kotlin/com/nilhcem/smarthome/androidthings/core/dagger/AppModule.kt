@@ -7,7 +7,7 @@ import com.nilhcem.smarthome.androidthings.core.dagger.viewmodel.ViewModelModule
 import dagger.Module
 import dagger.Provides
 
-@Module(includes = arrayOf(ViewModelModule::class))
+@Module(includes = [ViewModelModule::class])
 class AppModule {
 
     @AppScope @Provides fun provideDatabaseReference(): DatabaseReference {

@@ -12,9 +12,9 @@ class LightsLiveData @Inject constructor(val firebase: DatabaseReference) : Live
 
     companion object {
         private val TAG = Lights::class.java.simpleName!!
-        private val FIREBASE_LIGHTS = "lights"
-        private val FIREBASE_LIGHTS_ON = "on"
-        private val FIREBASE_LIGHTS_RGB = "spectrumRGB"
+        private const val FIREBASE_LIGHTS = "lights"
+        private const val FIREBASE_LIGHTS_ON = "on"
+        private const val FIREBASE_LIGHTS_RGB = "spectrumRGB"
     }
 
     private val valueEventListener = object : ValueEventListener {
